@@ -1,0 +1,201 @@
+// bower:scss
+// endbower
+@font-face {
+  font-family: 'nexa_lightregular';
+  src: url('/fonts/nexa_light-webfont.eot');
+  src: url('/fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/nexa_light-webfont.woff2') format('woff2'),
+  url('/fonts/nexa_light-webfont.woff') format('woff'),
+  url('/fonts/nexa_light-webfont.ttf') format('truetype'),
+  url('/fonts/nexa_light-webfont.svg#nexa_lightregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'nexa_boldregular';
+  src: url('/fonts/nexa_bold-webfont.eot');
+  src: url('/fonts/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/nexa_bold-webfont.woff2') format('woff2'),
+  url('/fonts/nexa_bold-webfont.woff') format('woff'),
+  url('/fonts/nexa_bold-webfont.ttf') format('truetype'),
+  url('/fonts/nexa_bold-webfont.svg#nexa_boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-family: 'nexa_boldregular', Helvetica, Arial, sans-serif;
+}
+
+$color-yelow: #f0e13b;
+$color-black: #23272c;
+$btn-yelow: #ecd161;
+$btn-green: #cce1bc;
+
+
+body {
+  background: url(/images/bg-fex.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: 'nexa_lightregular', Helvetica, Arial, sans-serif;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+.row {
+  width: 410px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.logo {
+  width: 250px;
+  margin: 0 auto;
+
+  span {
+    text-align: left;
+    font-size: 17px;
+    display: block;
+  }
+}
+
+
+/* Tipografia */
+.text-teaser {
+  font-size: 22px;
+  color: #FFF;
+  line-height: 1.2em;
+  margin: 35px 0;
+  font-family: 'nexa_boldregular', Helvetica, Arial, sans-serif;
+  text-shadow: 1px 2px #333;
+
+  span {
+    display: block;
+    font-size: 30px;
+    color: $color-yelow;
+  }
+}
+
+
+/* Botões */
+.btn {
+  padding: 10px 20px;
+  line-height: 100%;
+  color: $color-black;
+  background: $btn-green;
+  border-color: #d2eac4;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+
+  &.speaker {
+    background: $btn-yelow;
+    border-color: #f6d860;
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+
+/* Eu vou */
+.here {
+  border: 2px solid #FFF;
+  border-radius: 3px;
+  margin-top: 30px;
+
+  .box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 5px;
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    height: 50px;
+
+    &.strong {
+      background-color: rgba(255, 255, 255, 0.9);
+      font-size: 35px;
+      font-family: 'nexa_boldregular', Helvetica, Arial, sans-serif;
+    }
+
+    .fa {
+      color: #4bb157;
+    }
+  }
+
+  &:after, &:before {
+    display: table;
+    content: "";
+    zoom: 1;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+}
+
+
+/* Media Queries */
+@media only screen and (max-device-width: 480px) {
+  .row {
+    width: 90%;
+  }
+
+  .logo {
+    span {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .text-teaser {
+    font-size: 19px;
+
+    span {
+      font-size: 27px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .here {
+    .box {
+      padding-top: 12px;
+      font-size: 13px;
+
+      &.strong {
+        font-size: 23px;
+      }
+    }
+  }
+}
