@@ -1,0 +1,1 @@
+$(function(){"use strict";$.getJSON("http://graph.facebook.com/?ids=https://www.facebook.com/frontendexperience",function(e){var t=e["https://www.facebook.com/frontendexperience"];$("#likes").text(t.likes)})});
